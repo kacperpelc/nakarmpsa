@@ -7,12 +7,12 @@ on:
 jobs:
   test:
     timeout-minutes: 15
-    runs-on: mcr.microsoft.com/playwright:v1.57.0-noble
+    runs-on: ubuntu-latest
     steps:
     - name: Install dependencies
       run: npm ci
-    # - name: Install Playwright Browsers
-    #   run: npx playwright install --with-deps
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
     # - uses: actions/upload-artifact@v4
