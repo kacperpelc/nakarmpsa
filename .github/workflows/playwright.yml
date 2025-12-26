@@ -6,6 +6,7 @@ on:
     branches: [ main, master ]
   # schedule:
   #   - cron: "58 10,21 * * *"
+
 jobs:
   test:
     timeout-minutes: 15
